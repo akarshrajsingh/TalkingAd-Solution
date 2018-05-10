@@ -22,7 +22,7 @@ for df in [train, valid]:
     df['ip2'] = df['ip']
     df['app2'] = df['app']
     df['channel2'] = df['channel']
-    
+##Downsampling function
 def downsampling(df, frac):
     df0 = df[df['is_attributed'] == 0].sample(frac = frac, random_state = 0)
     df1 = df[df['is_attributed'] == 1]
